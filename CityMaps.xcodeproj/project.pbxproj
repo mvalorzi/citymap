@@ -16,6 +16,8 @@
 		9C62D1512C76D3C5009C610E /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62D1502C76D3C5009C610E /* City.swift */; };
 		9C62D1542C76D7BB009C610E /* MapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62D1532C76D7BB009C610E /* MapService.swift */; };
 		9C62D1562C76E7F0009C610E /* DataListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62D1552C76E7F0009C610E /* DataListItem.swift */; };
+		9C62D1592C76ECEA009C610E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C62D1572C76ECEA009C610E /* Localizable.strings */; };
+		9C62D15E2C76EE3C009C610E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62D15D2C76EE3C009C610E /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,9 @@
 		9C62D1502C76D3C5009C610E /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		9C62D1532C76D7BB009C610E /* MapService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapService.swift; sourceTree = "<group>"; };
 		9C62D1552C76E7F0009C610E /* DataListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataListItem.swift; sourceTree = "<group>"; };
+		9C62D1582C76ECEA009C610E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9C62D15B2C76EDF5009C610E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9C62D15D2C76EE3C009C610E /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +69,8 @@
 				9C62D1522C76D7A2009C610E /* Services */,
 				9C62D14F2C76D3A9009C610E /* Model */,
 				9C62D1482C76D305009C610E /* Controllers */,
+				9C62D15A2C76ECF4009C610E /* Resources */,
+				9C62D15C2C76EE1C009C610E /* Extensions */,
 				9C62D13A2C76D2CA009C610E /* CityMapsApp.swift */,
 				9C62D13C2C76D2CA009C610E /* ContentView.swift */,
 				9C62D13E2C76D2CD009C610E /* Assets.xcassets */,
@@ -104,6 +111,22 @@
 				9C62D1532C76D7BB009C610E /* MapService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		9C62D15A2C76ECF4009C610E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9C62D15C2C76EE1C009C610E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9C62D1572C76ECEA009C610E /* Localizable.strings */,
+				9C62D15D2C76EE3C009C610E /* StringExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +171,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 9C62D12E2C76D2CA009C610E;
 			productRefGroup = 9C62D1382C76D2CA009C610E /* Products */;
@@ -165,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C62D1422C76D2CD009C610E /* Preview Assets.xcassets in Resources */,
+				9C62D1592C76ECEA009C610E /* Localizable.strings in Resources */,
 				9C62D13F2C76D2CD009C610E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C62D15E2C76EE3C009C610E /* StringExtension.swift in Sources */,
 				9C62D13D2C76D2CA009C610E /* ContentView.swift in Sources */,
 				9C62D14C2C76D34B009C610E /* CityView.swift in Sources */,
 				9C62D1542C76D7BB009C610E /* MapService.swift in Sources */,
@@ -188,12 +214,25 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		9C62D1572C76ECEA009C610E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C62D1582C76ECEA009C610E /* en */,
+				9C62D15B2C76EDF5009C610E /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		9C62D1432C76D2CD009C610E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -257,6 +296,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -324,6 +364,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -353,6 +394,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  CityMaps
+
+  Created by Martin Valorzi on 22/08/2024.
+  
+*/
+
+filter = "filtro";
+loading = "cargando ...";

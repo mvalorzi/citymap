@@ -11,7 +11,7 @@ struct CityView: View {
     var body: some View {
         GeometryReader { geometry in
             if viewModel.isLoading {
-                ProgressView("Loading...")
+                ProgressView("loading".localized)
                     .progressViewStyle(CircularProgressViewStyle())
             } else {
                 VStack {
