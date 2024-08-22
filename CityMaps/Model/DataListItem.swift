@@ -10,4 +10,5 @@ import Foundation
 struct DataListItem : Identifiable {
     var id: Int
     var title: String
+    var value: String
 }
