@@ -10,9 +10,10 @@ import Foundation
 final class CityViewModel: ObservableObject {
     var cities = [City]()
     private var initList = [DataListItem]()
+    @Published var filterList = [DataListItem]()
     @Published var isLoading = false
     @Published var clueText = ""
-    @Published var filterList = [DataListItem]()
+
     var service = MapService()
 
     func filterResults() {
@@ -27,9 +28,9 @@ final class CityViewModel: ObservableObject {
     func setupFilterList() -> [DataListItem] {
         var dataList = [DataListItem]()
         for city in cities {
-            dataList.append(DataListItem(id: city.id, title: city.name ?? "", value: city.name?.lowercased() ?? ""))
+            dataList.append(DataListItem(id: city.id, title: "\(city.name ?? ""), \(city.country ?? "")", value: city.name?.lowercased() ?? ""))
         }
-        return dataList
+        return dataList.sorted(by: { $0.title < $1.title })
     }
 
     init() {
