@@ -18,6 +18,7 @@
 		9C62D1562C76E7F0009C610E /* DataListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62D1552C76E7F0009C610E /* DataListItem.swift */; };
 		9C62D1592C76ECEA009C610E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C62D1572C76ECEA009C610E /* Localizable.strings */; };
 		9C62D15E2C76EE3C009C610E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62D15D2C76EE3C009C610E /* StringExtension.swift */; };
+		9C62D1602C76F0AB009C610E /* FinderModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62D15F2C76F0AB009C610E /* FinderModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		9C62D1582C76ECEA009C610E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9C62D15B2C76EDF5009C610E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9C62D15D2C76EE3C009C610E /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		9C62D15F2C76F0AB009C610E /* FinderModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +92,7 @@
 		9C62D1482C76D305009C610E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				9C62D1492C76D34B009C610E /* CityView.swift */,
-				9C62D14B2C76D34B009C610E /* CityViewModel.swift */,
+				9C62D1612C76F29D009C610E /* City */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -116,6 +117,7 @@
 		9C62D15A2C76ECF4009C610E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9C62D15F2C76F0AB009C610E /* FinderModifier.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -127,6 +129,15 @@
 				9C62D15D2C76EE3C009C610E /* StringExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9C62D1612C76F29D009C610E /* City */ = {
+			isa = PBXGroup;
+			children = (
+				9C62D1492C76D34B009C610E /* CityView.swift */,
+				9C62D14B2C76D34B009C610E /* CityViewModel.swift */,
+			);
+			path = City;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +216,7 @@
 				9C62D13D2C76D2CA009C610E /* ContentView.swift in Sources */,
 				9C62D14C2C76D34B009C610E /* CityView.swift in Sources */,
 				9C62D1542C76D7BB009C610E /* MapService.swift in Sources */,
+				9C62D1602C76F0AB009C610E /* FinderModifier.swift in Sources */,
 				9C62D1512C76D3C5009C610E /* City.swift in Sources */,
 				9C62D14E2C76D34B009C610E /* CityViewModel.swift in Sources */,
 				9C62D13B2C76D2CA009C610E /* CityMapsApp.swift in Sources */,
