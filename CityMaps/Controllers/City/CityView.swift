@@ -14,23 +14,15 @@ struct CityView: View {
                     .progressViewStyle(CircularProgressViewStyle())
             } else {
                 VStack {
-                    TextField("filter".localized, text: $viewModel.clueText)
-                    .modifier(ModifierFinder(text: $viewModel.clueText))
-                    .background(Color(.systemGray6))
-                    .cornerRadius(8)
-                    .onChange(of: viewModel.clueText) {
-                        viewModel.filterResults()
-                    }
                     NavigationView {
-                            List(viewModel.filterList) { item in
-                                HStack {
-                                    Text(item.title)
-                                        .foregroundColor(.black)
-                                }
-                                .onTapGesture {
-                                }
+                        List(viewModel.filterList, id: \.id) { item in
+                            HStack {
+                                Text(item.title)
+                                    .foregroundColor(.black)
                             }
-                            .listStyle(PlainListStyle())
+                        }
+                        .listStyle(.plain)
+                        .searchable(text: $viewModel.clueText, placement: .navigationBarDrawer(displayMode: .always), prompt: "filter".localized)
                         }
                 }.padding()
             }
