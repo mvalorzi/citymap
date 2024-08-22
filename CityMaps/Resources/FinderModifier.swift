@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ModifierFinder: ViewModifier {
     @Binding var text: String
-    @Binding var isTextFieldFocused: Bool
     var maxLength = -1
     func body(content: Content) -> some View {
         HStack {
@@ -21,8 +20,6 @@ struct ModifierFinder: ViewModifier {
                         text = String($0.prefix(maxLength))
                     }
                 }
-            if isTextFieldFocused {
-            }
         }
     }
 }
