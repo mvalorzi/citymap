@@ -9,7 +9,6 @@ import SwiftUI
 struct CityView: View {
     @ObservedObject var viewModel: CityViewModel
     var body: some View {
-        GeometryReader { geometry in
             if viewModel.isLoading {
                 ProgressView("loading".localized)
                     .progressViewStyle(CircularProgressViewStyle())
@@ -33,10 +32,8 @@ struct CityView: View {
                             }
                             .listStyle(PlainListStyle())
                         }
-                }
+                }.padding()
             }
-        }
-        .padding()
     }
 }
 
