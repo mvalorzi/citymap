@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import MapKit
 
 final class CityViewModel: ObservableObject {
     var cities = [City]()
@@ -21,6 +22,10 @@ final class CityViewModel: ObservableObject {
             dataList.append(DataListItem(id: city.id, title: "\(city.name ?? ""), \(city.country ?? "")", value: city.name?.lowercased() ?? ""))
         }
         return dataList.sorted(by: { $0.title < $1.title })
+    }
+
+    func selectedCity(item: DataListItem) -> MapViewModel {
+        MapViewModel(city: cities.first(where: {$0.id == item.id}))
     }
 
     init() {

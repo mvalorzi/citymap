@@ -16,7 +16,7 @@ struct CityView: View {
                 VStack {
                     NavigationView {
                         List(viewModel.filterList, id: \.id) { item in
-                            HStack {
+                            NavigationLink(destination: MapView(viewModel: viewModel.selectedCity(item: item))) {
                                 Text(item.title)
                                     .foregroundColor(.black)
                             }

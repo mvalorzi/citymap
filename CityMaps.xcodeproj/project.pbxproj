@@ -19,6 +19,8 @@
 		9C62D1592C76ECEA009C610E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C62D1572C76ECEA009C610E /* Localizable.strings */; };
 		9C62D15E2C76EE3C009C610E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62D15D2C76EE3C009C610E /* StringExtension.swift */; };
 		9C62D1602C76F0AB009C610E /* FinderModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62D15F2C76F0AB009C610E /* FinderModifier.swift */; };
+		9C715AFB2C78098A000478A0 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C715AF82C78098A000478A0 /* MapView.swift */; };
+		9C715AFD2C78098A000478A0 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C715AFA2C78098A000478A0 /* MapViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		9C62D15B2C76EDF5009C610E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9C62D15D2C76EE3C009C610E /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		9C62D15F2C76F0AB009C610E /* FinderModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderModifier.swift; sourceTree = "<group>"; };
+		9C715AF82C78098A000478A0 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		9C715AFA2C78098A000478A0 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,7 @@
 		9C62D1482C76D305009C610E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9C715AF72C780918000478A0 /* Map */,
 				9C62D1612C76F29D009C610E /* City */,
 			);
 			path = Controllers;
@@ -138,6 +143,15 @@
 				9C62D14B2C76D34B009C610E /* CityViewModel.swift */,
 			);
 			path = City;
+			sourceTree = "<group>";
+		};
+		9C715AF72C780918000478A0 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				9C715AF82C78098A000478A0 /* MapView.swift */,
+				9C715AFA2C78098A000478A0 /* MapViewModel.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +229,8 @@
 				9C62D15E2C76EE3C009C610E /* StringExtension.swift in Sources */,
 				9C62D13D2C76D2CA009C610E /* ContentView.swift in Sources */,
 				9C62D14C2C76D34B009C610E /* CityView.swift in Sources */,
+				9C715AFB2C78098A000478A0 /* MapView.swift in Sources */,
+				9C715AFD2C78098A000478A0 /* MapViewModel.swift in Sources */,
 				9C62D1542C76D7BB009C610E /* MapService.swift in Sources */,
 				9C62D1602C76F0AB009C610E /* FinderModifier.swift in Sources */,
 				9C62D1512C76D3C5009C610E /* City.swift in Sources */,
