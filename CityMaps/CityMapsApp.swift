@@ -11,7 +11,7 @@ import SwiftUI
 struct CityMapsApp: App {
     var body: some Scene {
         WindowGroup {
-            CityView(viewModel: CityViewModel())
+            WelcomeView(viewModel: WelcomeViewModel())
         }
     }
 }

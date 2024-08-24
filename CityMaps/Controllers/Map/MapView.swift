@@ -11,12 +11,10 @@ import MapKit
 struct MapView: View {
     @ObservedObject var viewModel: MapViewModel
     var body: some View {
-        GeometryReader { geometry in
             VStack {
                 Map(position: $viewModel.position)
                     .mapStyle(.hybrid(elevation: .realistic))
             }
-        }
         .padding()
     }
 }

@@ -9,3 +9,6 @@
 
 filter = "filter";
 loading = "loading ...";
+continue = "Continue";
+welcome_header = "Welcome to CiyMaps";
+welcome_content = "Technical Challenge - Ualá. ";

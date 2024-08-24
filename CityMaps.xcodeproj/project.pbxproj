@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C339A2F2C7A999000176C0D /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C339A2E2C7A999000176C0D /* WelcomeView.swift */; };
+		9C339A312C7A99D300176C0D /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C339A302C7A99D300176C0D /* WelcomeViewModel.swift */; };
 		9C62D13B2C76D2CA009C610E /* CityMapsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62D13A2C76D2CA009C610E /* CityMapsApp.swift */; };
 		9C62D13D2C76D2CA009C610E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62D13C2C76D2CA009C610E /* ContentView.swift */; };
 		9C62D13F2C76D2CD009C610E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C62D13E2C76D2CD009C610E /* Assets.xcassets */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C339A2E2C7A999000176C0D /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		9C339A302C7A99D300176C0D /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
 		9C62D1372C76D2CA009C610E /* CityMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CityMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C62D13A2C76D2CA009C610E /* CityMapsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityMapsApp.swift; sourceTree = "<group>"; };
 		9C62D13C2C76D2CA009C610E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +57,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C339A2D2C7A993900176C0D /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				9C339A2E2C7A999000176C0D /* WelcomeView.swift */,
+				9C339A302C7A99D300176C0D /* WelcomeViewModel.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
 		9C62D12E2C76D2CA009C610E = {
 			isa = PBXGroup;
 			children = (
@@ -96,8 +109,9 @@
 		9C62D1482C76D305009C610E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				9C715AF72C780918000478A0 /* Map */,
 				9C62D1612C76F29D009C610E /* City */,
+				9C715AF72C780918000478A0 /* Map */,
+				9C339A2D2C7A993900176C0D /* Welcome */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -228,8 +242,10 @@
 			files = (
 				9C62D15E2C76EE3C009C610E /* StringExtension.swift in Sources */,
 				9C62D13D2C76D2CA009C610E /* ContentView.swift in Sources */,
+				9C339A312C7A99D300176C0D /* WelcomeViewModel.swift in Sources */,
 				9C62D14C2C76D34B009C610E /* CityView.swift in Sources */,
 				9C715AFB2C78098A000478A0 /* MapView.swift in Sources */,
+				9C339A2F2C7A999000176C0D /* WelcomeView.swift in Sources */,
 				9C715AFD2C78098A000478A0 /* MapViewModel.swift in Sources */,
 				9C62D1542C76D7BB009C610E /* MapService.swift in Sources */,
 				9C62D1602C76F0AB009C610E /* FinderModifier.swift in Sources */,

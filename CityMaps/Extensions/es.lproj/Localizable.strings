@@ -8,3 +8,7 @@
 
 filter = "filtro";
 loading = "cargando ...";
+continue = "Continuar";
+welcome_header = "Bienvenido a CityMaps";
+welcome_content = "Desafío Técnico - Ualá. ";
+
