@@ -8,22 +8,13 @@
 import SwiftUI
 struct CityView: View {
     @ObservedObject var viewModel: CityViewModel
-    @State private var orientation = UIDeviceOrientation.unknown
     var body: some View {
         Group {
             if viewModel.isLoading {
                 ProgressView("loading".localized)
                     .progressViewStyle(CircularProgressViewStyle())
             } else {
-                if orientation.isPortrait {
-                    List(viewModel.filterList, id: \.id) { item in
-                        NavigationLink(destination: MapView(viewModel: viewModel.selectCity(item: item))) {
-                            Text(item.title)
-                        }
-                    }
-                    .listStyle(.plain)
-                    .searchable(text: $viewModel.clueText, placement: .navigationBarDrawer(displayMode: .always), prompt: "filter".localized)
-                } else {
+                if viewModel.orientation.isLandscape {
                     HStack {
                         List(viewModel.filterList, id: \.id) { item in
                             Button(item.title) {
@@ -34,15 +25,23 @@ struct CityView: View {
                         .searchable(text: $viewModel.clueText, placement: .navigationBarDrawer(displayMode: .always), prompt: "filter".localized)
                         MapView(viewModel: MapViewModel(city: viewModel.selectedCity))
                     }
+                } else {
+                    List(viewModel.filterList, id: \.id) { item in
+                        NavigationLink(destination: MapView(viewModel: viewModel.selectCity(item: item))) {
+                            Text(item.title)
+                        }
+                    }
+                    .listStyle(.plain)
+                    .searchable(text: $viewModel.clueText, placement: .navigationBarDrawer(displayMode: .always), prompt: "filter".localized)
                 }
             }
         }
         .onRotate { newOrientation in
-                orientation = newOrientation
+            viewModel.orientation = newOrientation
         }
     }
 }
 
 #Preview {
-    CityView(viewModel: CityViewModel())
+    CityView(viewModel: CityViewModel(orientation: .portrait))
 }

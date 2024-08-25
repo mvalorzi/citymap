@@ -14,6 +14,7 @@ final class CityViewModel: ObservableObject {
     @Published var isLoading = false
     @Published var clueText = ""
     @Published var selectedCity : City?
+    @Published var orientation: UIDeviceOrientation
 
     var service = MapService()
 
@@ -26,14 +27,15 @@ final class CityViewModel: ObservableObject {
     }
 
     func changeCity(item: DataListItem) {
-        selectedCity = cities.first(where: {$0.id == item.id})
+      selectedCity = cities.first(where: {$0.id == item.id})
     }
 
     func selectCity(item: DataListItem) -> MapViewModel {
-        MapViewModel(city: cities.first(where: {$0.id == item.id}))
+        return MapViewModel(city: cities.first(where: {$0.id == item.id}))
     }
 
-    init() {
+    init(orientation: UIDeviceOrientation) {
+        self.orientation = orientation
         isLoading = true
         service.readCities() { [weak self] result in
             switch result {

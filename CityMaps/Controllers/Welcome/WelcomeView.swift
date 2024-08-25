@@ -9,6 +9,7 @@ import SwiftUI
 
 struct WelcomeView: View {
     @ObservedObject var viewModel: WelcomeViewModel
+    @State private var orientation = UIDeviceOrientation.unknown
     var body: some View {
         GeometryReader { geometry in
             NavigationView  {
@@ -20,7 +21,7 @@ struct WelcomeView: View {
                     Spacer()
                     Image("background")
                     Spacer()
-                    NavigationLink(destination: CityView(viewModel: CityViewModel())) {
+                    NavigationLink(destination: CityView(viewModel: CityViewModel(orientation: orientation))) {
                         Text("continue".localized)
                             .frame(width: geometry.size.width * 0.9, height: geometry.size.height * 0.05)
                             .background(.black)
@@ -30,7 +31,9 @@ struct WelcomeView: View {
 
                 }.padding()
             }
-        }
+        }.onRotate { newOrientation in
+            orientation = newOrientation
+    }
     }
 }
 
