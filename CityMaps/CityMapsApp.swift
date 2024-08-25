@@ -11,7 +11,11 @@ import SwiftUI
 struct CityMapsApp: App {
     var body: some Scene {
         WindowGroup {
-            WelcomeView(viewModel: WelcomeViewModel())
+            GeometryReader { geometry in
+                WelcomeView(viewModel: WelcomeViewModel())
+            }
         }
     }
 }
+
+

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9C339A2F2C7A999000176C0D /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C339A2E2C7A999000176C0D /* WelcomeView.swift */; };
 		9C339A312C7A99D300176C0D /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C339A302C7A99D300176C0D /* WelcomeViewModel.swift */; };
+		9C339A332C7AD51B00176C0D /* DeviceRotationViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C339A322C7AD51B00176C0D /* DeviceRotationViewModifier.swift */; };
 		9C62D13B2C76D2CA009C610E /* CityMapsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62D13A2C76D2CA009C610E /* CityMapsApp.swift */; };
 		9C62D13D2C76D2CA009C610E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62D13C2C76D2CA009C610E /* ContentView.swift */; };
 		9C62D13F2C76D2CD009C610E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C62D13E2C76D2CD009C610E /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		9C339A2E2C7A999000176C0D /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		9C339A302C7A99D300176C0D /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
+		9C339A322C7AD51B00176C0D /* DeviceRotationViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceRotationViewModifier.swift; sourceTree = "<group>"; };
 		9C62D1372C76D2CA009C610E /* CityMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CityMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C62D13A2C76D2CA009C610E /* CityMapsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityMapsApp.swift; sourceTree = "<group>"; };
 		9C62D13C2C76D2CA009C610E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			children = (
 				9C62D1572C76ECEA009C610E /* Localizable.strings */,
 				9C62D15D2C76EE3C009C610E /* StringExtension.swift */,
+				9C339A322C7AD51B00176C0D /* DeviceRotationViewModifier.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				9C339A2F2C7A999000176C0D /* WelcomeView.swift in Sources */,
 				9C715AFD2C78098A000478A0 /* MapViewModel.swift in Sources */,
 				9C62D1542C76D7BB009C610E /* MapService.swift in Sources */,
+				9C339A332C7AD51B00176C0D /* DeviceRotationViewModifier.swift in Sources */,
 				9C62D1602C76F0AB009C610E /* FinderModifier.swift in Sources */,
 				9C62D1512C76D3C5009C610E /* City.swift in Sources */,
 				9C62D14E2C76D34B009C610E /* CityViewModel.swift in Sources */,
