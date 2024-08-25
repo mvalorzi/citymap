@@ -13,6 +13,7 @@ final class CityViewModel: ObservableObject {
     @Published var filterList = [DataListItem]()
     @Published var isLoading = false
     @Published var clueText = ""
+    @Published var selectedCity : City?
 
     var service = MapService()
 
@@ -24,7 +25,11 @@ final class CityViewModel: ObservableObject {
         return dataList.sorted(by: { $0.title < $1.title })
     }
 
-    func selectedCity(item: DataListItem) -> MapViewModel {
+    func changeCity(item: DataListItem) {
+        selectedCity = cities.first(where: {$0.id == item.id})
+    }
+
+    func selectCity(item: DataListItem) -> MapViewModel {
         MapViewModel(city: cities.first(where: {$0.id == item.id}))
     }
 

@@ -17,9 +17,8 @@ struct CityView: View {
             } else {
                 if orientation.isPortrait {
                     List(viewModel.filterList, id: \.id) { item in
-                        NavigationLink(destination: MapView(viewModel: viewModel.selectedCity(item: item))) {
+                        NavigationLink(destination: MapView(viewModel: viewModel.selectCity(item: item))) {
                             Text(item.title)
-                                .foregroundColor(.black)
                         }
                     }
                     .listStyle(.plain)
@@ -27,12 +26,13 @@ struct CityView: View {
                 } else {
                     HStack {
                         List(viewModel.filterList, id: \.id) { item in
-                            Text(item.title)
-                                .foregroundColor(.black)
+                            Button(item.title) {
+                                viewModel.changeCity(item: item)
+                            }
                         }
                         .listStyle(.plain)
                         .searchable(text: $viewModel.clueText, placement: .navigationBarDrawer(displayMode: .always), prompt: "filter".localized)
-                        MapView(viewModel: MapViewModel(city: nil))
+                        MapView(viewModel: MapViewModel(city: viewModel.selectedCity))
                     }
                 }
             }
