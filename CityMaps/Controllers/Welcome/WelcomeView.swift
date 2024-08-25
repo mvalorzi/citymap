@@ -31,7 +31,13 @@ struct WelcomeView: View {
 
                 }.padding()
             }
-        }.onRotate { newOrientation in
+            .onAppear {
+                if geometry.size.width > geometry.size.height {
+                    orientation = .landscapeLeft
+                }
+            }
+        }
+        .onRotate { newOrientation in
             orientation = newOrientation
     }
     }
