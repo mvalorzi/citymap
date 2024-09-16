@@ -12,6 +12,10 @@ struct MapView: View {
     @ObservedObject var viewModel: MapViewModel
     var body: some View {
             VStack {
+                Text(viewModel.cityTitle)
+                    .font(.headline)
+                Text(viewModel.citySubTitle)
+                    .font(.subheadline)
                 Map(position: $viewModel.position)
                     .mapStyle(.hybrid(elevation: .realistic))
             }

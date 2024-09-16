@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct WelcomeView: View {
-    @ObservedObject var viewModel: WelcomeViewModel
     @State private var orientation = UIDeviceOrientation.unknown
     var body: some View {
         GeometryReader { geometry in
@@ -26,9 +25,7 @@ struct WelcomeView: View {
                             .frame(width: geometry.size.width * 0.9, height: geometry.size.height * 0.05)
                             .background(.black)
                             .cornerRadius(8.0)
-                                    }
-
-
+                        }
                 }.padding()
             }
             .onAppear {
@@ -44,5 +41,5 @@ struct WelcomeView: View {
 }
 
 #Preview {
-    WelcomeView(viewModel: WelcomeViewModel())
+    WelcomeView()
 }
